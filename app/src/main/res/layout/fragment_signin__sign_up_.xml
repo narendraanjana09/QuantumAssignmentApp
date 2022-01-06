@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.login_signup.Signin_SignUp_Fragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@color/white1"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/top_layout1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="match_parent"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:background="@color/red"
+            android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:text="Social"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/white"
+            android:gravity="bottom"
+            android:textSize="30sp"
+            android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="X"
+                android:gravity="bottom"
+                android:textColor="@color/white"
+                android:textSize="40sp"
+                />
+        </LinearLayout>
+
+      <com.google.android.material.tabs.TabLayout
+          android:id="@+id/tabLayout"
+          app:layout_constraintTop_toBottomOf="@id/top_layout1"
+          android:background="@drawable/signin_signup_layout_bg"
+          android:layout_width="match_parent"
+          app:tabTextColor="@color/black"
+          app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+          app:tabRippleColor="@color/teal_200"
+          app:tabIndicator="@color/white1"
+          app:tabSelectedTextColor="@color/white"
+          android:layout_height="wrap_content"
+          />
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewpager"
+            android:layout_marginTop="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

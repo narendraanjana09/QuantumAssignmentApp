@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/login_SignUp_Fragment">
+
+    <fragment
+        android:id="@+id/login_SignUp_Fragment"
+        android:name="com.nsa.quantumassignmentapp.ui.login_signup.Signin_SignUp_Fragment"
+        android:label="fragment_login__sign_up_"
+        tools:layout="@layout/fragment_signin__sign_up_" >
+        <action
+            android:id="@+id/action_login_SignUp_Fragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.nsa.quantumassignmentapp.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_login_SignUp_Fragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true"
+            app:destination="@id/login_SignUp_Fragment" />
+    </fragment>
+</navigation>

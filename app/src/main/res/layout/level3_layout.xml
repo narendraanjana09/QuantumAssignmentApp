@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@+id/image_view"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="200dp"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/l3_speaker_image"
+        android:layout_height="120dp"/>
+    <TextView
+        android:id="@+id/off_textview"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/image_view"
+        app:layout_constraintTop_toTopOf="@id/image_view"
+        android:textColor="@color/black1"
+        android:text="Big offer day"
+        android:textAllCaps="true"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/description_textview"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/off_textview"
+        app:layout_constraintTop_toBottomOf="@id/off_textview"
+        android:textColor="@color/white"
+        android:text="flat 35% off"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/holo_green_light"
+        android:textAllCaps="true"
+        android:textSize="15sp"
+        android:layout_height="wrap_content"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
